@@ -21,5 +21,12 @@ angular.module('starter.controllers', [])
 
   var chatId = $stateParams.id;
   $scope.chat = ChatsService.get(chatId);
+  console.log($scope.logged_in);
 })
 
+.controller('LoginCtrl', function($scope, $stateParams, myapi) {
+  // $scope.chat = ChatsService.get($stateParams.chatId);
+  $scope.doLogin = function() {
+    myapi.login(this.username, this.password);
+  }
+})
