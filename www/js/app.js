@@ -42,6 +42,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                     $rootScope.account = data;
                     $state.go('list');
                 });
+            },
+            logout: function() {
+                self.credentials = undefined;
+                $rootScope.logged_in = false;
             }
         };
 })

@@ -1,6 +1,9 @@
 angular.module('starter.controllers', [])
 
-.controller('ListCtrl', function($scope, $state, $ionicHistory, ChatsService) {
+.controller('ListCtrl', function($scope, $state, $ionicHistory, ChatsService, myapi) {
+    if (!$scope.logged_in) {
+        $state.go('login');
+    }
 	// ChatsService.all().then(function(chats){
  //        $scope.chats = chat;
  //    });
@@ -14,9 +17,16 @@ angular.module('starter.controllers', [])
 	// });
 
 	// $state.go('detail');
+    $scope.doLogout = function() {
+        myapi.logout();
+        $state.go('login');
+    }
 })
 
-.controller('DetailCtrl', function($scope, $stateParams, ChatsService) {
+.controller('DetailCtrl', function($scope, $state, $stateParams, ChatsService) {
+    if (!$scope.logged_in) {
+        $state.go('login');
+    }
   // $scope.chat = ChatsService.get($stateParams.chatId);
 
   var chatId = $stateParams.id;
