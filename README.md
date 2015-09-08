@@ -4,3 +4,4 @@ This demo showing a list/detail page that can only be accessed after entering us
 
 <a href="http://imgur.com/BHwQ5gP"><img src="http://i.imgur.com/BHwQ5gPm.png" title="source: imgur.com" /></a>
 <a href="http://imgur.com/L78RiYJ"><img src="http://i.imgur.com/L78RiYJm.png" title="source: imgur.com" /></a>
+<a href="http://imgur.com/9cand64"><img src="http://i.imgur.com/9cand64m.png" title="source: imgur.com" /></a>
